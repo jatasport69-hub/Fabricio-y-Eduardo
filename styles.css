@@ -1,0 +1,235 @@
+/* Variables de color Azul y Amarillo */
+:root {
+    --primary-blue: #0d3b66;
+    --dark-blue: #051923;
+    --accent-yellow: #f4d35e;
+    --bright-yellow: #f9c74f;
+    --light-bg: #f8f9fa;
+    --white: #ffffff;
+    --text-color: #333333;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, var(--dark-blue), var(--primary-blue));
+    color: var(--white);
+    padding: 50px 20px;
+    text-align: center;
+    border-bottom: 6px solid var(--accent-yellow);
+}
+
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.badge {
+    background-color: var(--accent-yellow);
+    color: var(--dark-blue);
+    padding: 6px 16px;
+    font-weight: 700;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.header h1 span {
+    color: var(--accent-yellow);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    color: #e0e0e0;
+}
+
+.welcome-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid var(--accent-yellow);
+    text-align: left;
+}
+
+.welcome-box p {
+    margin-bottom: 8px;
+}
+
+.welcome-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* Contenido Principal */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--primary-blue);
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background-color: var(--accent-yellow);
+    display: block;
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+
+/* Tarjetas de Tarjetas / Cronograma */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border-left: 6px solid var(--primary-blue);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+.highlight-card {
+    border-left-color: var(--accent-yellow);
+    background: #fffdf5;
+}
+
+.card-header {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 12px 20px;
+}
+
+.highlight-card .card-header {
+    background-color: var(--accent-yellow);
+    color: var(--dark-blue);
+}
+
+.card-header h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.activity-list {
+    list-style: none;
+    padding: 20px;
+}
+
+.activity-list li {
+    margin-bottom: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+
+.activity-list li:last-child {
+    margin-bottom: 0;
+}
+
+.time {
+    background-color: #eef4f8;
+    color: var(--primary-blue);
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 0.88rem;
+    margin-right: 12px;
+    min-width: 120px;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Versículo y Bendición */
+.verse-section {
+    margin-top: 50px;
+    text-align: center;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    border: 1px solid #eee;
+}
+
+.bible-verse {
+    font-style: italic;
+    color: #555;
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+}
+
+.bible-verse footer {
+    font-style: normal;
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-top: 8px;
+}
+
+.blessing {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+}
+
+/* Pie de página */
+.footer {
+    text-align: center;
+    padding: 25px;
+    background-color: var(--dark-blue);
+    color: #aaa;
+    font-size: 0.9rem;
+    margin-top: 50px;
+}
+
+/* Responsivo para móviles */
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 1.6rem;
+    }
+    
+    .activity-list li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .time {
+        margin-bottom: 5px;
+    }
+}
